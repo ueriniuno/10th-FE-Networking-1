@@ -2,15 +2,35 @@
 body {
     margin: 0;
     padding: 0;
+    margin-left: 175px; /*postion: absolute 없애고, body에서 margin-left 지정, 얘 없애면 헤더까지 같이 움직임..왜지?*/
 }
 
 #rollingBar {
-    width: 930px;
+    /* width: 930px;
     height: 49px;
     top: 127px;
     left: 175px;
-    background-color: #f0f0f0;
+    background-color: #fff;
     position: absolute;
+
+    display: flex;
+    justify-content: space-between;
+    gap: 8px; */
+    width: 930px;
+    height: 49px;
+    margin-bottom: 39px;
+    display: flex;
+    background-color: #fff;
+    justify-content: space-between;
+    gap: 8px;
+}
+
+
+#rollingBar-left, #rollingBar-right {
+    width: calc(50% - 4px);
+    background-color: #f0f0f0;
+    height: 100%;
+    border: 1px solid var(--border-border-default, #D2DAE0)
 }
 
 #newsSection {
@@ -18,16 +38,13 @@ body {
     height: 24px;
     background-color: beige;
     top: 208px;
-    gap: 0px; 
-    left: 175px;
-    position: absolute;
+    gap: 0px;
 }
 
 #gridView {
     width: 930px;
     height: 388px;
     top: 256px;
-    left: 175px;
     border: 1px solid #ccc;
     position: absolute;
     display: grid;

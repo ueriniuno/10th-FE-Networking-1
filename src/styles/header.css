@@ -11,8 +11,7 @@
 
 #header-left {
     display: flex;
-    margin-left: 175px;
-    align-items: center;
+    align-items: center; /*margin-left: 175px; 없앰*/
     width: 50%;
     height: 29px;
 }
