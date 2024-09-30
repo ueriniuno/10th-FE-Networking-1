@@ -1,6 +1,6 @@
 import { getDate } from "../utils/getDate.js";
 export function header() {
-    console.log("Header function is being executed"); // header.js에서 오류나서 콘솔 추가
+    console.log("Header function is being executed");
 
 
     const leftSection = document.getElementById("header-left");
