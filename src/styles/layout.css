@@ -2,20 +2,10 @@
 body {
     margin: 0;
     padding: 0;
-    margin-left: 175px; /*postion: absolute 없애고, body에서 margin-left 지정, 얘 없애면 헤더까지 같이 움직임..왜지?*/
+    margin-left: 175px;
 }
 
 #rollingBar {
-    /* width: 930px;
-    height: 49px;
-    top: 127px;
-    left: 175px;
-    background-color: #fff;
-    position: absolute;
-
-    display: flex;
-    justify-content: space-between;
-    gap: 8px; */
     width: 930px;
     height: 49px;
     margin-bottom: 39px;
@@ -23,15 +13,81 @@ body {
     background-color: #fff;
     justify-content: space-between;
     gap: 8px;
+    overflow: hidden;
+    display: flex;
 }
 
-
 #rollingBar-left, #rollingBar-right {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
     width: calc(50% - 4px);
     background-color: #f0f0f0;
     height: 100%;
     border: 1px solid var(--border-border-default, #D2DAE0)
 }
+
+#rollingBar-left ul,
+#rollingBar-right ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    width: 95%;
+    height: 50%;
+    display: flex;
+
+    position: relative;
+    overflow: hidden;
+}
+
+
+#rollingBar-left li,
+#rollingBar-right li {
+    position: absolute; 
+    opacity: 0; /* 안 보일 때 */
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+#rollingBar-left li.visible,
+#rollingBar-right li.visible {
+    opacity: 1; /* 보일 때 */
+    transform: translateY(0);
+    animation: rollUp 0.3s forwards; 
+}
+
+#rollingBar-left li.roll,
+#rollingBar-right li.roll {
+    transform: translateY(-100%); /* 위로 롤링 */
+    opacity: 0;
+    animation: rollOut 0.3s forwards;
+}
+
+
+@keyframes rollUp {
+    from {
+        transform: translateY(100%); /* 아래->위 */
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes rollOut {
+    from {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateY(-100%); /* 위로 사라짐 */
+        opacity: 0;
+    }
+}
+
+
+
+
 
 #newsSection {
     width: 930px;
