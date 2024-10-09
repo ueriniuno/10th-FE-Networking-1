@@ -92,12 +92,34 @@ body {
 #newsSection {
     width: 930px;
     height: 24px;
-    background-color: beige;
     top: 208px;
+    left: 175px;
     gap: 0px;
+    margin-bottom: 24px;
+    justify: space-between;
+    opacity: 0px;
 }
 
-#gridView {
+#newsSection button {
+    height: 19px;
+    background: none;
+    border: none;
+    color: #000;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 0;
+}
+
+#newsSection button:hover {
+    text-decoration: underline;
+}
+
+#newsSection button:active {
+    color: #000;
+    font-weight: bold;
+}
+
+/* #gridView {
     width: 930px;
     height: 388px;
     top: 256px;
@@ -105,4 +127,4 @@ body {
     position: absolute;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-}
+} */

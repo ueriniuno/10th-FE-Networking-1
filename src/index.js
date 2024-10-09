@@ -1,7 +1,9 @@
 import { header } from "./components/header.js"
 import { AutoRollingNews } from "./components/rolling.js";
+import { createFieldTab } from "./components/fieldTab.js";
 
 header(); // 의미없는 renderHeader 삭제
+createFieldTab();
 
 const leftArticles = [
     "기사 제목 1", 

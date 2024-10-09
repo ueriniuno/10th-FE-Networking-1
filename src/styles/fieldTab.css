@@ -1,0 +1,35 @@
+#fieldTab {
+    width: 930px;
+    height: 40px;
+    padding: 16px 0px;
+    opacity: 0px;
+    background: #F5F7F9;
+    border: 1px solid var(--border-border-default, #D2DAE0);
+    box-sizing: border-box; /* 패딩과 테두리가 포함되도록 설정 */
+    display: flex;
+    align-items: center;
+}
+
+#fieldTab button {
+    height: 40px;
+    background: none;
+    padding: 0px 16px 0px 16px;
+    border: none;
+    outline: none;
+    gap: 8px;
+    font-size: 14px;
+    color: #879298;
+}
+
+#fieldTab button:hover {
+    text-decoration: underline;
+}
+
+
+#fieldTab button:active {
+    background: var(--surface-surface-brand-alt, #7890E7);
+    font-weight: bold;
+    width: 166px;
+    color: #fff;
+    text-align: left;
+}

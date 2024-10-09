@@ -1,5 +1,6 @@
 
 #header {
+    width: 930px;
     height: 29px;
     margin-top: 58px;
     margin-bottom: 40px;
@@ -31,17 +32,14 @@
 
 
 #header-right {
-    display: flex;
-    align-items: center;
-    width: 60%;
+    width: 50%;
     height: 29px;
 }
 
 #header-right div {
-    display: flex;
     width: 140px;
     height: 22px;
     font-size: 16px;
     color: #5F6E76;
-
+    margin-left: auto;
 }
