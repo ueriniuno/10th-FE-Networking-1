@@ -1,4 +1,4 @@
-export function createFieldTab() {
+export function createfieldTab() {
     const categories = [
         "종합/경제", 
         "방송/통신", 
@@ -11,11 +11,26 @@ export function createFieldTab() {
     
     const fieldTab = document.getElementById('fieldTab');
 
-    categories.forEach(category => {
+    let selectedIndex = null;
+
+    categories.forEach((category, index) => {
         const button = document.createElement('button');
         button.textContent = category;
-        button.className = 'fieldTab button';
+        button.className = 'fieldTab-button';
 
+        button.addEventListener('click', () => {
+            
+            if (selectedIndex !== index) {
+                const buttons = fieldTab.querySelectorAll('button');
+                buttons.forEach(btn => {
+                    btn.classList.remove('active');
+                });
+
+                button.classList.add('active');
+
+                selectedIndex = index;
+            }
+        });
         fieldTab.appendChild(button);
     });
 }
