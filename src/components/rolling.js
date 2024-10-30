@@ -4,13 +4,34 @@ export function AutoRollingNews(articlesLeft, articlesRight) {
 
     articlesLeft.forEach(article => {
         const li = document.createElement('li');
-        li.textContent = article;
+        // press와 title을 각각 <span>으로 감싸기
+        const pressSpan = document.createElement('span');
+        pressSpan.classList.add('press'); // 스타일을 적용할 수 있는 클래스 추가
+        pressSpan.textContent = article.press; // press 텍스트
+        
+        const titleSpan = document.createElement('span');
+        titleSpan.classList.add('title'); // 스타일을 적용할 수 있는 클래스 추가
+        titleSpan.textContent = article.title; // title 텍스트
+
+        li.appendChild(pressSpan);
+        li.appendChild(titleSpan);
         rollingBarLeft.appendChild(li);
     });
 
     articlesRight.forEach(article => {
         const li = document.createElement('li');
-        li.textContent = article;
+
+        // press와 title을 각각 <span>으로 감싸기
+        const pressSpan = document.createElement('span');
+        pressSpan.classList.add('press'); // 스타일을 적용할 수 있는 클래스 추가
+        pressSpan.textContent = article.press; // press 텍스트
+        
+        const titleSpan = document.createElement('span');
+        titleSpan.classList.add('title'); // 스타일을 적용할 수 있는 클래스 추가
+        titleSpan.textContent = article.title; // title 텍스트
+
+        li.appendChild(pressSpan);
+        li.appendChild(titleSpan);
         rollingBarRight.appendChild(li);
     });
 

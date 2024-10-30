@@ -33,8 +33,18 @@ fetch('./src/data/rollingNews.json')
     })
     .then(data => {
 
-        const articlesLeft = data.headline1.map(article => `${article.press} ${article.title}`);
-        const articlesRight = data.headline2.map(article => `${article.press} ${article.title}`);
+        const articlesLeft = data.headline1.map(article => ({
+            press: article.press,
+            title: article.title
+        }));
+        // const articlesRight = data.headline2.map(article => `${article.press} ${article.title}`);
+        const articlesRight = data.headline2.map(article => ({
+            press: article.press,
+            title: article.title
+        }));
+
+        console.log("Left Articles:", articlesLeft);  // 확인을 위해 출력
+        console.log("Right Articles:", articlesRight); // 확인을 위해 출력
 
         const leftArticles = articlesLeft.slice(0, 5);
         const rightArticles = articlesRight.slice(0, 5);

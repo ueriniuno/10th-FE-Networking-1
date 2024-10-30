@@ -40,13 +40,29 @@ body {
     overflow: hidden;
 }
 
+.press {
+    font: bold;
+    font-size: 14px;
+    font-weight: 700;
+    text-align: left;
+}
+
+.title {
+    font-size: 14px;
+    font-weight: 500;
+    text-align: left;
+    color: var(--text-text-default, #5F6E76);
+    margin-left: 12px;
+}
 
 #rollingBar-left li,
 #rollingBar-right li {
     position: absolute; 
     opacity: 0; /* 안 보일 때 */
     transition: opacity 1s ease, transform 1s ease;
+    font-size: 14px;
 }
+
 
 #rollingBar-left li.visible,
 #rollingBar-right li.visible {
@@ -128,7 +144,3 @@ body {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
 } */
-
-#press {
-    font-weight: bold; /* 글씨를 두껍게 설정 */
-}
