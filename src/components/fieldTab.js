@@ -19,7 +19,7 @@ export function createfieldTab() {
         button.className = 'fieldTab-button';
 
         button.addEventListener('click', () => {
-            
+
             if (selectedIndex !== index) {
                 const buttons = fieldTab.querySelectorAll('button');
                 buttons.forEach(btn => {
@@ -31,6 +31,7 @@ export function createfieldTab() {
                 selectedIndex = index;
             }
         });
+
         fieldTab.appendChild(button);
     });
 }

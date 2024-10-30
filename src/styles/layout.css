@@ -128,3 +128,7 @@ body {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
 } */
+
+#press {
+    font-weight: bold; /* 글씨를 두껍게 설정 */
+}
