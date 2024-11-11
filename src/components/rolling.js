@@ -2,16 +2,17 @@ export function AutoRollingNews(articlesLeft, articlesRight) {
     const rollingBarLeft = document.querySelector('#rollingBar-left ul');
     const rollingBarRight = document.querySelector('#rollingBar-right ul');
 
+    // 피드백-> 왼, 오 같은 함수 합치기
     articlesLeft.forEach(article => {
         const li = document.createElement('li');
-        // press와 title을 각각 <span>으로 감싸기
+
         const pressSpan = document.createElement('span');
-        pressSpan.classList.add('press'); // 스타일을 적용할 수 있는 클래스 추가
-        pressSpan.textContent = article.press; // press 텍스트
+        pressSpan.classList.add('press');
+        pressSpan.textContent = article.press;
         
         const titleSpan = document.createElement('span');
-        titleSpan.classList.add('title'); // 스타일을 적용할 수 있는 클래스 추가
-        titleSpan.textContent = article.title; // title 텍스트
+        titleSpan.classList.add('title');
+        titleSpan.textContent = article.title;
 
         li.appendChild(pressSpan);
         li.appendChild(titleSpan);
@@ -21,14 +22,13 @@ export function AutoRollingNews(articlesLeft, articlesRight) {
     articlesRight.forEach(article => {
         const li = document.createElement('li');
 
-        // press와 title을 각각 <span>으로 감싸기
         const pressSpan = document.createElement('span');
-        pressSpan.classList.add('press'); // 스타일을 적용할 수 있는 클래스 추가
-        pressSpan.textContent = article.press; // press 텍스트
+        pressSpan.classList.add('press');
+        pressSpan.textContent = article.press;
         
         const titleSpan = document.createElement('span');
-        titleSpan.classList.add('title'); // 스타일을 적용할 수 있는 클래스 추가
-        titleSpan.textContent = article.title; // title 텍스트
+        titleSpan.classList.add('title');
+        titleSpan.textContent = article.title;
 
         li.appendChild(pressSpan);
         li.appendChild(titleSpan);
