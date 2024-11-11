@@ -111,7 +111,7 @@ body {
     top: 208px;
     left: 175px;
     gap: 0px;
-    margin-bottom: 24px;
+    margin-bottom: 16px;
     justify: space-between;
     opacity: 0px;
 }
@@ -130,17 +130,39 @@ body {
     text-decoration: underline;
 }
 
-#newsSection button:active {
+#newsSection button.active {
     color: #000;
     font-weight: bold;
 }
 
-/* #gridView {
+
+#gridView {
     width: 930px;
     height: 388px;
     top: 256px;
     border: 1px solid #ccc;
     position: absolute;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-} */
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    flex-wrap: wrap;
+    justify-items: center;
+    align-items: center;
+}
+
+#gridView > div { 
+    width: 154.17px;
+    height: 96.25px;
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.press-image {
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    cursor: pointer;
+}
